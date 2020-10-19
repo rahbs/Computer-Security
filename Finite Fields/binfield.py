@@ -40,7 +40,7 @@ def bin_mul(a, b, n):
     f = [0] * 8  # pre-computation table for `a`
     f[0] = a
     for i in range(1, 8):
-        # shift 결과 저장해두기
+        # save shifted result
         f[i] = f[i-1] << 1
         # carry
         if carry(f[i]):
